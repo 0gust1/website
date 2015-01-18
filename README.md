@@ -1,16 +1,20 @@
-# 0gust1 - Site perso
+# 0gust1 - site perso
 
-Le contenu, le site, et l'automate de rendu.
+Une énième tentative de faire mon site perso.
 
-Un répertoire source et un répertoire 
-Définir un site : contenu de src
+C'est un site statique généré via metalsmith.
 
-Moteur de rendu : options, templates
-Doc des templates (objets)
+Ce qui est visé :
 
+- simplicité et souplesse
+- respect de l'arborescence des répertoires
+- assistant de création de nouveau post/page/article
 
+L'objectif est d'avoir un générateur minimal, compatible avec une utilisation manuelle (l'arborescence du site est le reflet de l'arborescence des sources), mais qui pourra être par la suite cablé sur une interface graphique plus haut niveau.
 
-## Idées :
+Idée : utiliser metalsmith pour générer les données pour l'interface d'administration.
 
-* gestion des commentaires via scraping de gist
-* Tester l'intégration avec GIT
+## Références :
+
+https://gist.github.com/0gust1/ea36285366fba78471af
+
