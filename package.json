@@ -12,6 +12,7 @@
   "dependencies": {
     "connect": "^3.3.3",
     "connect-livereload": "^0.5.2",
+    "js-yaml": "^3.2.5",
     "load-metalsmith-plugins": "^0.1.1",
     "lodash": "^2.4.1",
     "metalsmith": "^1.0.1",
@@ -31,8 +32,12 @@
     "metalsmith-title": "0.0.1",
     "metalsmith-watch": "^0.1.1",
     "metalsmith-webpack": "^1.0.1",
+    "mkpath": "^0.1.0",
+    "moment": "^2.9.0",
     "nunjucks": "^1.1.0",
+    "prepend-file": "^0.2.0",
     "serve-static": "^1.7.1",
+    "slug": "^0.8.0",
     "swig": "^1.4.2",
     "tiny-lr-fork": "0.0.5"
   }

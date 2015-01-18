@@ -61,7 +61,7 @@ var metalsmith = Metalsmith(__dirname)
   //.source('content')
   .clean(true)
   .source('src')
-  .use(ignore([
+  .use(plugins.ignore([
     '_templates/**/*','website.json'
   ]))
   .metadata({
@@ -70,8 +70,8 @@ var metalsmith = Metalsmith(__dirname)
       domain:'localhost:8080'
     }
   })
-  .use(watch())
-  .use(collections({
+  .use(plugins.watch())
+  .use(plugins.collections({
     notes: {
         pattern: 'notes/**/*.md',
         orderBy:'date',
@@ -87,30 +87,30 @@ var metalsmith = Metalsmith(__dirname)
     }
   }))
   //.use(gist())
-  .use(markdown({
+  .use(plugins.markdown({
     smartypants: true,
     gfm: true,
     tables: true
   }))
-  .use(permalinks({
+  .use(plugins.permalinks({
     pattern: ':path',
     date: 'YYYY',
     relative:true
   }))
-  .use(templates({
+  .use(plugins.templates({
     engine: 'swig',
     directory: 'src/_templates'
   }))
   //.use(feed({collection:'blog'}))
   .use(mine)
-  /*.use(webpack({
+  .use(plugins.webpack({
     context: path.resolve(__dirname, './src/js/'),
     entry: './index.js',
     output: {
       path: path.resolve(__dirname, './build/js/'),
       filename: 'bundle.js'
     }
-  }))*/
+  }))
   //.use(mythify)
   .build(function(err){
     if (err) throw err;
