@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}{{ title }}% endblock %}</title>
+  <meta name="description" content="{{ description }}">
+  {% block style %}
+  <link rel="stylesheet" href="//{{ site.domain }}/_css/normalize.css">
+  <link rel="stylesheet" href="//{{ site.domain }}/_css/main.css">
+  <link rel="stylesheet" href="//{{ site.domain }}/_css/perso.css">
+  {% endblock %}
+  
+</head>
+<body>
+
+	{% include 'partials/header.html' %}
+
+	{% include 'partials/menu.html' %}
+  
+  <section class="main">
+
+  {% block content %}{% endblock %}
+
+  </section>
+  
+	
+  {% include 'partials/footer.html' %}
+  
+  {% block scripts %}
+    <script src="//{{ site.domain }}/_js/bundle.js"></script>
+  {% endblock %}
+  
+</body>
+</html>

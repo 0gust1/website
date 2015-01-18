@@ -1,0 +1,23 @@
+
+<h2>Notes</h2>
+{% for post in collections.notes %}
+{% if loop.first %}<ol>{% endif %}
+
+  <li>
+  	<a href="{{ site.url }}/{{ post.path }}">{{ post.title }}</a>
+  </li>
+
+  {% if loop.last %}</ol>{% endif %}
+{% endfor %}
+
+<h2>Haikus</h2>
+{% for post in collections.haikus %}
+{% if loop.first %}<ol>{% endif %}
+
+  <li>
+  	<a href="{{ site.url }}/{{ post.path }}">{{ post.title }}</a>
+  </li>
+
+  {% if loop.last %}</ol>{% endif %}
+{% endfor %}
+
