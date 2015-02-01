@@ -16,36 +16,43 @@ function createPost(root,section,scheme,title){
     var fileContent = "";
 
     switch(scheme){
-        case ":year/:title":
+        case ":section/:year/:title_dir/:index_doc": // section/2015/my-awesome-title/index.md
             targetPath = path.resolve(root,section,moment().year().toString(),slug(title));
 
             break;
-        case ":title":
+        case ":section/:year/:title_doc": // section/2015/my-awesome-title.md
+            targetPath = path.resolve(root,section,moment().year().toString());
+            filename = slug(title)+".md";
+            break;
+        case ":section/:title/:index_doc": // /section/my-awesome-title/index.html
             targetPath = path.resolve(root,section,slug(title));
 
         break;
-        case "page":
+        case ":section/:title_doc": // /section/my-awesome-title.html
             targetPath = path.resolve(root,section);
             filename = slug(title)+".md";
         break;
         default:
-            //statements_def
+
             break;
     }
 
     fileContent += "---\n";
-    fileContent += jsYaml.dump({date:moment().get('date'),title:title,template:"post.html"});
+    fileContent += jsYaml.dump({date:moment().format("YYYY-MM-DD"),title:title,template:"post.html"});
     fileContent += "---\n";
     fileContent += "\n#"+title+"\n";
 
 
 
-    console.log("creating path :"+targetPath);
-    mkpath(targetPath);
-    console.log("creating file :"+filename);
-    fs.writeFile(path.resolve(targetPath,filename), fileContent);
-    // YYYY/MM/DD
+    console.log("creating path : "+targetPath);
+
+    mkpath.sync(targetPath);
+
+    console.log("creating file : "+filename);
+
+    fs.writeFileSync(path.resolve(targetPath,filename), fileContent);
 
 }
 
-createPost("src/","haikus",":year/:title","À l'ombre des hêtres");
+createPost("src/","notes",":section/:year/:title_dir/:index_doc","Comment est fabriqué ce site");
+console.log(slug("des css générées en JS"));
