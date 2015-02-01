@@ -77,17 +77,20 @@ var metalsmith = Metalsmith(__dirname)
         orderBy:'date',
         reverse:true
     },
-    haikus: {
-        pattern: 'haikus/**/*.md',
+    poemes: {
+        pattern: 'poemes/**/*.md',
         orderBy:'date',
         reverse:true
     },
     pages:{
         pattern: 'pages/**/*.md'
+    },
+    a_propos:{
+        pattern: 'a-propos/**/*.md'
     }
   }))
   //.use(gist())
-  .use(plugins.markdown({
+  .use(plugins.multimarkdown({
     smartypants: true,
     gfm: true,
     tables: true
@@ -121,8 +124,9 @@ var metalsmith = Metalsmith(__dirname)
 
 
 function mine(files,metalsmith,done){
-console.log(files);
+//console.log(files);
 console.log(metalsmith);
+console.log(metalsmith._metadata.poemes);
   done();
 }
 
