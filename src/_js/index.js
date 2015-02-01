@@ -2,6 +2,7 @@
 
 /**
  * Generate sidenotes using footnotes from Multimarkdown generated content
+ * Idea and principle borrowed from Adrew Clark : http://acdlite.github.io/jquery.sidenotes/ and https://github.com/acdlite/jquery.sidenotes
  * @param  {String}
  */
 var processFootNotes = function(rootSel){
