@@ -1,5 +1,6 @@
 
 <h2>Notes</h2>
+
 {% for post in collections.notes %}
 {% if loop.first %}<ol>{% endif %}
 
@@ -10,8 +11,8 @@
   {% if loop.last %}</ol>{% endif %}
 {% endfor %}
 
-<h2>Haikus</h2>
-{% for post in collections.haikus %}
+<h2>Poésie</h2>
+{% for post in collections.poemes %}
 {% if loop.first %}<ol>{% endif %}
 
   <li>
