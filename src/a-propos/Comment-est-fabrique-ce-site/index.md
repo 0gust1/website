@@ -14,13 +14,13 @@ draft: false
 
 ## Pourquoi ne pas avoir utilisé XXX ou YYY ?
 
-*Parce que.*
+*Parce que c'est pas l'outil qui m'intéresse vraiment.*
 
 Celà fait maintenant quelques temps que je "joue" avec différents outils pour construire des sites statiques : Wintersmith, Grunt, Gulp, Metalsmith, Assemble, Hexo, ... *adnauseam*.
 
 Un *générateur de site* n'est qu'un script transformant un ensemble de contenus et contenants (fichiers et répertoires) en un site web. Ce qui est important c'est la structure qui est manipulée.
 
-Dans le même esprit que notes/2014/faire-un-site-statique-simplement, je souhaitais revenir "à la base" de ce qui constitue un site web pour de la publication personnelle.
+Dans le même esprit que </notes/2014/faire-un-site-statique-simplement>, je souhaitais revenir "à la base" de ce qui constitue un site web pour de la publication personnelle.
 
 C'est sûr qu'il aurait été beaucoup plus simple de m'adapter ou de tordre un outil existant (Jekyll, Assemble ou autre), c'est une autre démarche.
 

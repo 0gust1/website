@@ -23,6 +23,10 @@ Un compte rendu d'expérience :
 
 Chez le W3C, une grosse page de wiki consolidant quelques études, propositions et discusssions : <http://www.w3.org/html/wg/wiki/PoeticSemantics>.
 
+## Citations :
+
+http://romy.tetue.net/des-citations-bien-balisees
+
 
 
 

@@ -1,6 +1,6 @@
-var path = require('path'),
-    fs = require('fs'),
-    slug = require('slug'),
+var path   = require('path'),
+    fs     = require('fs'),
+    slug   = require('slug'),
     moment = require('moment'),
     mkpath = require("mkpath"),
     jsYaml = require('js-yaml');
@@ -46,8 +46,6 @@ function createPost(root,section,scheme,title){
 
     console.log("creating path : "+targetPath);
 
-    mkpath.sync(targetPath);
-
     console.log("creating file : "+filename);
 
     fs.writeFileSync(path.resolve(targetPath,filename), fileContent);
@@ -55,4 +53,3 @@ function createPost(root,section,scheme,title){
 }
 
 createPost("src/","notes",":section/:year/:title_dir/:index_doc","Comment est fabriqué ce site");
-console.log(slug("des css générées en JS"));
